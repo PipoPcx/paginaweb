@@ -1,0 +1,164 @@
+/* Estilo del contenedor de partículas */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100vh; /* Asegura que cubra toda la pantalla */
+    top: 0;
+    left: 0;
+    z-index: -1; /* Asegura que las partículas estén detrás del contenido */
+    background-color: #081534; /* Color de fondo */
+}
+
+/* Estilo del cuerpo */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #081534; /* Color de fondo */
+    overflow-y: auto; /* Permite desplazamiento */
+}
+
+/* Estilo del rectángulo en la parte superior */
+#header {
+    width: 100%; /* Ancho completo */
+    height: 120px; /* Altura del rectángulo */
+    background: linear-gradient(to bottom, rgba(75, 103, 112, 1), rgba(75, 103, 112, 0.4) 80%); /* Degradado */
+    display: flex; /* Usamos flexbox para alinear el logo y el menú */
+    justify-content: center; /* Centra todo el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    position: relative; /* Para posicionar el logo correctamente */
+    z-index: 1; /* Asegura que el encabezado esté por encima de las partículas */
+}
+
+/* Estilo del logo */
+#logo {
+    height: 100px; /* Altura del logo */
+    margin-right: 20px; /* Espacio entre el logo y el menú */
+}
+
+/* Estilo de la navegación */
+nav ul {
+    list-style: none; /* Eliminar estilo de lista */
+    padding: 0; /* Eliminar padding */
+    margin: 0; /* Eliminar margen */
+    display: flex; /* Usamos flexbox para alinear horizontalmente */
+}
+
+/* Estilo de los enlaces */
+nav a {
+    text-decoration: none; /* Eliminar subrayado */
+    color: white; /* Color del texto */
+    margin: 0 15px; /* Espacio entre los enlaces */
+}
+
+/* Estilo del contenedor de rectángulos */
+#rectangles-container {
+    padding: 20px;
+    position: relative; /* Para que los rectángulos se posicionen dentro de este contenedor */
+    width: 100%; /* Para asegurarse de que ocupa todo el ancho */
+    margin-top: 20px; /* Agregar margen superior para espaciarlo del encabezado */
+}
+
+/* Estilo del rectángulo blanco */
+/* Estilo del rectángulo blanco */
+.rectangle {
+    width: 1500px; /* Ancho del rectángulo */
+    height: 400px; /* Altura del rectángulo */
+    background-color: white; /* Color de fondo del rectángulo */
+    
+    border-radius: 15px; /* Esquinas redondeadas */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea el contenido desde el inicio (parte superior) */
+    margin: 20px auto; /* Centra y agrega espacio entre los rectángulos */
+    position: relative; /* Para asegurar que cada rectángulo se coloque en su propia posición */
+    flex-direction: column; /* Para apilar el logo y el nombre del plan */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.2s; /* Transición suave para la interacción */
+	
+	  /* Borde degradado */
+    border: 10px solid; /* Ancho del borde */
+    border-image: linear-gradient(45deg, blue, red) 1; /* Degradado de borde */
+}
+
+.rectangle:hover {
+    transform: translateY(-5px); /* Levanta ligeramente el rectángulo al pasar el mouse */
+}
+
+/* Estilo del logo */
+.logo {
+    width: 15%; /* Ajustar el tamaño del logo */
+    position: relative; /* Usar posición relativa */
+    top: -30px; /* Mueve el logo hacia abajo */
+    left: 50px; /* Mueve el logo hacia la derecha */
+    transform: scale(1.2); /* Escala el logo al 120% */
+    transition: transform 0.3s; /* Transición suave al escalar */
+	
+}
+
+.logo:hover {
+    transform: scale(1.25); /* Aumenta el tamaño del logo al pasar el mouse */
+}
+
+/* Estilo del nombre del plan */
+.plan-name {
+    margin-top: 10px;
+    text-align: center;
+    position: relative; /* Posición relativa para mover el nombre */
+    top: -30px; /* Mueve el texto hacia abajo */
+    left: 80px; /* Mueve el texto hacia la derecha */
+    font-weight: bold; /* Pone el texto en negrita */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    font-size: 1.5em; /* Tamaño de fuente mayor */
+    color: #4A90E2; /* Color más oscuro para el texto */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra para el texto */
+}
+
+/* Estilo de la información adicional */
+.additional-info {
+    margin-top: 5px;
+    text-align: center;
+    position: relative; /* Posición relativa para mover el nombre */
+    top: -10px; /* Mueve el texto hacia abajo */
+    left: 50px; /* Mueve el texto hacia la derecha */
+    font-size: 1.2em; /* Tamaño de fuente normal */
+    color:#7F8C8D; /* Color gris para el texto adicional */
+    text-transform: none; /* Convierte el texto a mayúsculas */
+    font-weight: normal; /* Asegúrate de que el texto no esté en negrita */
+}
+
+.coverage-container {
+     margin-top: 5px;
+    text-align: center;
+    position: relative; /* Posición relativa para mover el nombre */
+    top: -100px; /* Mueve el texto hacia abajo */
+    left: 500px; /* Mueve el texto hacia la derecha */
+    font-size: 1.2em; /* Tamaño de fuente normal */
+    color:#7F8C8D; /* Color gris para el texto adicional */
+    text-transform: none; /* Convierte el texto a mayúsculas */
+    font-weight: normal; /* Asegúrate de que el texto no esté en negrita */
+}
+
+.coverage-item {
+    font-size: 14px; /* Tamaño de fuente para las coberturas */
+    margin: 3px 0; /* Espacio entre coberturas */
+}
+
+.coverage-title {
+    font-size: 16px; /* Tamaño de fuente del título */
+    font-weight: bold; /* Hacer el título más grueso */
+    margin: 10px 0; /* Espacio arriba y abajo */
+    text-align: center; /* Centrar el título */
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .rectangle {
+        width: 90%; /* Ancho del rectángulo en móviles */
+        height: auto; /* Ajustar altura automáticamente */
+    }
+
+    .logo {
+        width: 30%; /* Aumentar tamaño del logo en móvil */
+    }
+}

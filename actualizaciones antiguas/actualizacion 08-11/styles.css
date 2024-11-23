@@ -1,0 +1,1117 @@
+/* Estilo del contenedor de partículas */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100vh; /* Asegura que cubra toda la pantalla */
+    top: -13px;
+    left: -47px;
+    z-index: -1; /* Asegura que las partículas estén detrás del contenido */
+    background-color: #081534; /* Color de fondo */
+    bottom: 100%;
+}
+
+/* Estilo del cuerpo */
+body {
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #081534; /* Color de fondo */
+    overflow-y: auto; /* Permite desplazamiento */
+    margin-top: 0%;
+    margin-right: 0%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+}
+
+/* Estilo del rectángulo en la parte superior */
+#header {
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Cambiar a auto para que se ajuste a su contenido */
+    background: linear-gradient(to bottom, rgba(75, 103, 112, 1), rgba(75, 103, 112, 0.4) 80%); /* Degradado */
+    display: flex; /* Usamos flexbox para alinear el logo y el menú */
+    justify-content: center; /* Centra todo el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si no hay suficiente espacio */
+    position: relative; /* Para posicionar el logo correctamente */
+    z-index: 1;
+    padding-right: 0%;
+    padding-left: 0%;
+    padding-bottom: 0%; /* Agrega un poco de padding */
+    padding-top: 0%;
+}
+
+/* Estilo del logo */
+#logo {
+    height: 100px; /* Altura del logo */
+    margin-right: 20px; /* Espacio entre el logo y el menú */
+    margin-top: 11px;
+	
+}
+
+/* Estilo de la navegación */
+nav ul {
+    list-style: none; /* Eliminar estilo de lista */
+    padding: 0; /* Eliminar margen */
+    display: flex; /* Usamos flexbox para alinear horizontalmente */
+    flex-wrap: wrap; /* Permite que los enlaces se envuelvan si no hay suficiente espacio */
+    justify-content: center; /* Centra los enlaces en el contenedor */
+}
+
+/* Estilo de los enlaces */
+nav a {
+    text-decoration: none; /* Eliminar subrayado */
+    color: white; /* Color del texto */
+    margin: 0 10px; /* Espacio entre los enlaces */
+    font-size: 1em; /* Tamaño de fuente ajustable */
+}
+/* Contenedor principal de rectángulos */
+#rectangles-container {
+    padding-top: 20px;
+    position: relative;
+    width: 10000%;
+    margin-top: 20px;
+}
+
+/* Estilo del rectángulo */
+.rectangle {
+    width: 1200px;
+    height: 313px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    border: 10px solid;
+    border-image: linear-gradient(45deg, blue, red) 1;
+}
+
+.rectangle:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilo del logo */
+.logo {
+    width: 210px;
+    margin: 10px 0;
+    filter: drop-shadow(3px 3px 1px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s;
+    /* Hacer que el posicionamiento sea absoluto para que no dependa de su contenedor */
+    position: absolute;
+    top: 44px; /* Ajusta según sea necesario */
+    left: 25px; /* Ajusta la posición horizontal según sea necesario */
+}
+
+.logo:hover {
+    transform: scale(1.2);
+}
+
+/* Estilo del nombre del plan */
+.plan-name {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 17px;
+    color: #0034FF;
+    margin-top: 67px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    /* Hacer que el posicionamiento sea absoluto para que no dependa de su contenedor */
+    position: absolute;
+    top: 148px; /* Ajusta según sea necesario */
+    left: 13px; /* Ajusta la posición horizontal según sea necesario */
+}
+
+/* Estilo de la información adicional (código del plan) */
+.additional-info {
+    font-size: 20px;
+    color: #7F8C8D;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 30px;
+    margin-right: 47px;
+    /* Hacer que el posicionamiento sea absoluto para que no dependa de su contenedor */
+    position: absolute;
+    top: 130px; /* Ajusta según sea necesario */
+    left: 30px; /* Ajusta la posición horizontal según sea necesario */
+}
+
+/* Contenedor gris dentro del rectángulo */
+.gray-rectangle {
+    background-color: #D7D7D7;
+    width: 55%;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    border-radius: 4px;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin-right: 0px;
+    margin-top: 69px;
+    margin-bottom: 58px;
+    height: 290px; /* Asegura que cubra toda la pantalla */
+}
+
+.titulo-hospitalario {
+    font-size: 20px;
+    color: #333;
+    margin-left: 177px;
+    font-weight: bold;
+    text-align: right;
+    padding-top: 0px;
+    padding-right: 0;
+    padding-left: 27px;
+    padding-bottom: 88px;
+    margin-top: -42px;
+}
+
+.titulo-ambulatorio {
+    font-size: 20px;
+    color: #333;
+    margin-left: -100px;
+    font-weight: bold;
+    text-align: left;
+    padding-top: 5px;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+
+/* Estilos de información hospitalaria y ambulatoria */
+.hospital-info {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+    padding: 0px;
+    margin-left: 20px;
+}
+
+/* Estilos de información hospitalaria y ambulatoria */
+ .ambulatory-info {
+    font-size: 14px;
+    color: #333;
+    margin-top: -200px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-left: 319px;
+    padding-bottom: 86px;
+    text-align: justify;
+}
+
+.hospital-label {
+    font-size: 20px;
+    color: #333;
+    margin-left: -316px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 5px;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.ambulatory-label {
+    font-size: 20px;
+    color: #333;
+    margin-left: -10px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 0px;
+    padding-right: 0;
+    padding-left: 0;
+    margin-top: -134px;
+}
+
+/* Estilo del texto UF */
+.plan-price {
+    position: absolute;
+    top: 52px;
+    right: 63px;
+    font-size: 30px;
+    color: #2E00CE;
+    font-weight: bold;
+    z-index: 1;
+}
+
+/* Estilo del precio en CLP */
+.price-info-clp {
+    position: absolute;
+    top: -61px;
+    right: 20px;
+    font-size: 30px;
+    color: #2E00CE;
+    font-weight: bold;
+    z-index: 1;
+}
+
+/* Botón de descarga */
+.download-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+    margin-left: 414px;
+    margin-bottom: -154px;
+    margin-top: -157px;
+}
+
+.download-button:hover {
+    background-color: darkred;
+    margin-bottom: 0px;
+}
+
+/* Contenedor del buscador */
+.search-container {
+    display: flex; /* Usar flexbox para centrar el contenido */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    margin-left: 20px; /* Espacio entre la nav y el buscador */
+}
+
+/* Estilos para el rectángulo del buscador con degradado */
+.search-box {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-left: 8px;
+    padding-bottom: 10px; /* Espaciado interno */
+    border: 2px solid #007bff; /* Color del borde */
+    border-radius: 5px; /* Bordes redondeados */
+    background: linear-gradient(to right, blue, red); /* Degradado de azul a blanco */
+    transition: border-color 0.3s ease; /* Transición suave para el borde */
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-right: 433px;
+}
+
+/* Estilo para el cuadro de búsqueda */
+#searchInput {
+    font-size: 1.5em; /* Aumentar el tamaño de la fuente */
+    color: #333; /* Color del texto */
+    padding: 10px; /* Espacio interno */
+    border: 2px solid #ccc; /* Borde del cuadro */
+    border-radius: 5px; /* Bordes redondeados */
+    width: calc(100% - 22px); /* Ancho del cuadro, restando el padding y el borde */
+    background-color: #fff; /* Fondo del cuadro */
+	font-weight: bold; /* Hacer la letra en negrita */
+}
+
+/* Estilo para el cuadro de búsqueda cuando está en foco */
+#searchInput:focus {
+    border-color: #007bff; /* Cambiar color del borde al hacer clic */
+    outline: none; /* Quitar el contorno por defecto */
+}
+
+.search-icon {
+    margin-left: -23px; /* Espacio entre el input y el icono */
+    font-size: 15px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+/* Estilo para el mensaje de no resultados */
+.no-results {
+    display: none; /* Ocultamos por defecto */
+    text-align: center; /* Centrar el texto */
+    color: red; /* Color del texto */
+    font-weight: bold; /* Hacerlo más visible */
+    margin: 20px; /* Espacio alrededor */
+    font-size: 1.2em; /* Tamaño de fuente más grande */
+    background-color: rgba(255,0,4,0.80); /* Fondo blanco semitransparente para mayor contraste */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(255,0,4,0.30); /* Sombra para darle profundidad */
+  
+}
+
+.container {
+    position: relative; /* Necesario para que el absolute funcione correctamente en el left rectangle */
+    padding-top: 20px; /* Ajusta según el espacio deseado al inicio */
+}
+
+/* Estilos para el rectángulo a la izquierda */
+.left-rectangle {
+    /*width: 100px; /* Ancho del rectángulo */
+    height: 163px; /* Altura automática según el contenido */
+    background: white;/* Degradado de azul a blanco */
+    border: 9px solid #ccc; /* Borde del rectángulo */
+    border-radius: 5px; /* Bordes redondeados */
+    padding-top: 18px;
+    padding-right: 30px;
+    padding-left: 66px;
+    padding-bottom: 124px; /* Espaciado interno */
+    margin-right: 87px; /* Espacio entre el rectángulo y el resto de la página */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 200px;
+    border-image: linear-gradient(45deg, blue, red) 1; /* Degradado de borde */
+    position: absolute;
+    top: 0; /* Comienza en la parte superior */
+    left: 0;
+    width: 150px; /* Ajusta el ancho según sea necesario */
+    margin-top: 51px;
+}
+
+
+
+/* Segundo rectángulo para el título */
+.title-container {
+    background-color: #B8B8B8; /* Color de fondo del segundo rectángulo */
+    border: 1px solid #EBEBEB; /* Borde */
+    padding-top: 3px;
+    padding-right: 0px;
+    padding-left: 30px;
+    padding-bottom: 0px; /* Espacio interno */
+    border-radius: 5px; /* Centrar el texto */
+    margin-bottom: 6px; /* Espacio entre el título y los checkboxes */
+    margin-right: -21px;
+    margin-top: -2px;
+    margin-left: -59px;
+}
+.select-title {
+    font-size: 20px; /* Tamaño de la fuente */
+    margin: 0; /* Elimina el margen */
+    color: #333; /* Color del texto */
+}
+
+/* Estilos para las etiquetas de los checkboxes */
+label {
+    display: flex; /* Alinea el checkbox y el texto en la misma línea */
+    align-items: center; /* Centra verticalmente el checkbox con el texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    margin-bottom: -4px; /* Espaciado entre los checkboxes */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la etiqueta */
+    margin-left: 12px;
+    margin-right: -71px;
+}
+
+/* Estilo para el input de edad */
+.edad-input {
+    width: 50px; /* Ajustar el ancho según sea necesario */
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-left: 10px; /* Ajustado para más espacio interno */
+    padding-bottom: 5px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-right: -4px; /* Espacio entre el recuadro y el checkbox */
+    margin-left: 84px; /* Ajustado para mayor coherencia */
+    font-size: 14px; /* Tamaño de la fuente */
+}
+
+/* Estilo específico para los checkboxes */
+.carga-checkbox {
+    width: 50px; /* Ajusta el ancho del checkbox */
+    height: 50px; /* Ajusta la altura del checkbox */
+    margin-right: 10px; /* Espacio entre el checkbox y el texto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el checkbox */
+    margin-left: 80px;
+    margin-bottom: -80px;
+    accent-color: blue; /* Cambia este valor por el color que desees */
+    margin-top: -80px;
+}
+
+/* Estilo específico para los checkboxes de Isapres */
+.isapre-checkbox {
+    width: 20px; /* Ajusta el ancho del checkbox */
+    height: 20px; /* Ajusta la altura del checkbox */
+    margin-right: 10px; /* Espacio entre el checkbox y el texto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el checkbox */
+    margin-left: -19px;
+    margin-bottom: 3px;
+    accent-color: blue; /* Cambia este valor por el color que desees */
+}
+
+/* Cambiar el color del checkbox cuando está seleccionado */
+input[type="checkbox"]:checked {
+    background-color: blue; /* Cambia el color de fondo al seleccionarlo */
+    border-color: #007bff; /* Cambia el color del borde al seleccionarlo */
+}
+
+/* Estilo para los grupos de entrada */
+.input-group {
+    margin-top: 1px;
+    margin-right: -4px;
+    margin-left: -60px;
+    margin-bottom: 30px;
+    padding-top: 1px;
+    padding-right: 18px;
+    padding-left: 15px;
+    padding-bottom: 1px; /* Unificado para todos los lados */
+    
+    width: 200px; /* Ancho del rectángulo */
+    height: 25px; /* Altura automática según el contenido */
+    display: flex; /* Usar flexbox para centrar */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+/* Estilo para los inputs */
+input[type="number"] {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo para el distintivo de cotizante/carga */
+.toggle-group {
+    display: flex; /* Alínea el label y el checkbox en línea */
+    align-items: center; /* Centra verticalmente */
+    margin-bottom: 15px; /* Espaciado debajo */
+    width: 25%; /* Ocupa todo el ancho del contenedor */
+}
+
+/* Estilo para el botón de agregar beneficiario */
+button {
+    background-color: #007bff; /* Color de fondo azul */
+    color: white; /* Color de texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+button:hover {
+    background-color: #0056b3; /* Color de fondo más oscuro al pasar el mouse */
+}
+
+/* Estilo para el nuevo rectángulo */
+.new-rectangle {
+    background-color: white; /* Fondo blanco */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px; /* Espaciado interno */
+    margin-top: 41px;
+    margin-right: 62px;
+    /*margin-left: -264px;*/
+    margin-bottom: 1px; /* Margen alrededor */
+    /*width: 70px; /* Ancho del rectángulo */
+    border: 9px solid #ccc; /* Borde del rectángulo */
+    padding-top: 18px;
+    padding-right: 10px;
+    padding-left: 66px;
+    padding-bottom: 20px; /* Espaciado interno */
+    border-image: linear-gradient(45deg, blue, red) 1; /* Degradado de borde */
+    margin-left: 200px; /* Ajusta para que no se superponga al left rectangle */
+    width: calc(100% - 200px); /* Ajusta el ancho según el margen izquierdo */
+}
+
+.text-container {
+    background-color: #B8B8B8; /* Color de fondo del segundo rectángulo */
+    border: 1px solid #EBEBEB;
+    margin-top: 3px;
+    margin-right: -4px;
+    margin-left: -60px;
+    margin-bottom: 30px;
+    padding-top: 1px;
+    padding-right: 18px;
+    padding-left: 15px;
+    padding-bottom: 1px; /* Unificado para todos los lados */
+    border-radius: 5px; /* Espacio entre el título y los checkboxes */
+    width: 200px; /* Ancho del rectángulo */
+    height: 25px; /* Altura automática según el contenido */
+    display: flex; /* Usar flexbox para centrar */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+/* Estilo del icono de ayuda */
+.help-icon {
+    font-size: 15px;
+    color: #007bff; /* Color azul */
+    cursor: pointer;
+    margin-left: 152px;
+    background-color: #f0f0f0;
+    padding-top: 2px;
+    padding-right: 2px;
+    padding-left: 2px;
+    padding-bottom: 2px;
+    border-radius: 50%;
+    font-weight: bold;
+    margin-top: -56px;
+    position: absolute;
+    margin-bottom: 0px;
+	
+}
+
+/* Estilo del texto de ayuda */
+.help-text {
+    font-size: 14px;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+    margin-top: 10px;
+    position: absolute;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-left: 121px;
+}
+
+/* Estilo para la lista de beneficiarios */
+#beneficiarios-list {
+    list-style-type: none; /* Quita las viñetas */
+    padding: 0; /* Espaciado interno */
+    margin: 0; /* Espaciado entre elementos */
+}
+
+#beneficiarios-list li {
+    background-color: #f0f0f0; /* Fondo gris claro */
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-left: 15px;
+    padding-bottom: 5px; /* Espaciado interno */
+    margin-top: 5px;
+    margin-bottom: 5px; /* Espaciado entre cada beneficiario */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-left: 4px solid #4a90e2; /* Borde izquierdo colorido */
+    font-size: 14px; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+    display: flex; /* Usar flexbox para alinear elementos */
+    justify-content: space-between; /* Espaciado entre elementos */
+    align-items: center; /* Centra verticalmente */
+    margin-left: -55px;
+}
+
+/* Opcional: ajuste para el texto y los botones dentro del recuadro */
+#beneficiarios-list li span {
+    flex: 1; /* Ocupa el espacio disponible */
+    display: flex;
+    align-items: center; /* Centra el texto verticalmente */
+}
+
+/* Estilo para el botón de eliminar */
+.delete-button {
+    background-color: red; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 50%; /* Botón redondeado */
+    width: 18px; /* Ancho del botón */
+    height: 18px; /* Alto del botón */
+    font-size: 10px; /* Tamaño de la "X" */
+    line-height: 18px; /* Centra verticalmente la "X" */
+    text-align: center; /* Centra horizontalmente la "X" */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    margin-left: 10px; /* Espacio entre el botón y el texto */
+    padding: 0; /* Elimina el padding interno */
+}
+
+.delete-button:hover {
+    background-color: darkred; /* Color de fondo al pasar el mouse */
+}
+
+/* Recuadro gris donde se agregan los beneficiarios */
+.beneficiarios {
+    width: 25%;
+    max-width: 80px;
+    margin-top: 20px;
+    margin-right: 0px;
+    margin-left: -96px;
+    margin-bottom: 20px; /* Centra el recuadro y da margen superior e inferior */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 10px;
+    border: 1px solid #AEAEAE; /* Borde gris */
+    background-color: #f9f9f9; /* Fondo gris claro */
+}
+
+/* Estilo para los cotizantes */
+.cotizante {
+    border: 2px solid #0400A6; /* Borde azul */
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-right: -80px;
+    margin-left: 69px;
+    margin-bottom: 10px; /* Centra el recuadro y añade margen superior e inferior */
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 10px;
+    background-color: #e7f1ff; /* Fondo azul claro */
+    width: 200px; /* Se asegura de que el ancho no supere el contenedor */
+}
+/* Estilo para las cargas */
+.carga {
+border: 2px solid #600000; /* Borde verde */
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-right: -208px;
+    margin-left: -50px;
+    margin-bottom: 10px; /* Espaciado inferior */
+    padding-top: 10px;
+    padding-right: 133px;
+    padding-left: 10px;
+    padding-bottom: 10px; /* Espaciado interno */
+    background-color: #e7ffe7; /* Fondo verde claro */
+    width: 200px; /* Asegura que el ancho no supere el contenedor */
+}
+
+.agregar-beneficiario-btn {
+    background-color: #007bff; /* Color de fondo azul */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-left: 3px;
+    padding-bottom: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+    width: 219px; /* Cambia a auto para ajustar según el contenido */
+    margin-top: 15px;
+    margin-right: 0px;
+    margin-left: -50px;
+    margin-bottom: 0px;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.agregar-beneficiario-btn:hover {
+    background-color: #0056b3; /* Color de fondo más oscuro al pasar el mouse */
+}
+
+#total-factor-container {
+    font-size: 15px;
+    color: #3498db;
+    background-color: #f0f8ff;
+    padding-top: 0px;
+    padding-right: 2px;
+    padding-left: 2px;
+    padding-bottom: 0px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: inline-block; /* Mantiene todo en una línea */
+    white-space: nowrap;
+    margin-left: -28px;
+    margin-top: 16px;
+}
+
+#total-factor-container span {
+    vertical-align: middle; /* Alinea los textos en el centro */
+}
+
+#total-uf-value {
+    color: #e74c3c; /* Color diferente para el valor */
+}
+
+
+/* Media query para dispositivos móviles */
+@media (max-width: 1044px) {
+  
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100vh; /* Asegura que cubra toda la pantalla */
+    top: -13px;
+    left: -47px;
+    z-index: -1; /* Asegura que las partículas estén detrás del contenido */
+    background-color: #081534; /* Color de fondo */
+    bottom: 100%;
+}
+
+/* Estilo del cuerpo */
+body {
+  flex-wrap: nowrap
+}
+
+/* Estilo del rectángulo en la parte superior */
+#header {
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Cambiar a auto para que se ajuste a su contenido */
+    background: linear-gradient(to bottom, rgba(75, 103, 112, 1), rgba(75, 103, 112, 0.4) 80%); /* Degradado */
+    display: flex; /* Usamos flexbox para alinear el logo y el menú */
+    justify-content: center; /* Centra todo el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si no hay suficiente espacio */
+    position: relative; /* Para posicionar el logo correctamente */
+    z-index: 1;
+    padding-right: 0%;
+    padding-left: 0%;
+    padding-bottom: 0%; /* Agrega un poco de padding */
+    padding-top: 0%;
+}
+
+/* Estilo del logo */
+#logo {
+    height: 100px; /* Altura del logo */
+    margin-right: 20px; /* Espacio entre el logo y el menú */
+    margin-top: 11px;
+	
+}
+
+/* Estilo de la navegación */
+nav ul {
+    list-style: none; /* Eliminar estilo de lista */
+    padding: 0; /* Eliminar margen */
+    display: flex; /* Usamos flexbox para alinear horizontalmente */
+    flex-wrap: wrap; /* Permite que los enlaces se envuelvan si no hay suficiente espacio */
+    justify-content: center; /* Centra los enlaces en el contenedor */
+}
+
+/* Estilo de los enlaces */
+nav a {
+    text-decoration: none; /* Eliminar subrayado */
+    color: white; /* Color del texto */
+    margin: 0 10px; /* Espacio entre los enlaces */
+    font-size: 1em; /* Tamaño de fuente ajustable */
+}
+/* Estilo del contenedor de rectángulos */
+#rectangles-container {
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    position: relative; /* Para que los rectángulos se posicionen dentro de este contenedor */
+    width: 100%; /* Para asegurarse de que ocupa todo el ancho */
+    margin-top: 20px;
+}
+
+/* Estilo del rectángulo blanco */
+.rectangle {
+    width: 1098px; /* Ancho del rectángulo */
+    height: 304px; /* Altura del rectángulo */
+    background-color: white; /* Color de fondo del rectángulo */
+    border-radius: 0px; /* Esquinas redondeadas */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea el contenido desde el inicio (parte superior) */
+    margin: 20px auto; /* Centra y agrega espacio entre los rectángulos */
+    position: relative; /* Para asegurar que cada rectángulo se coloque en su propia posición */
+    flex-direction: column; /* Para apilar el logo y el nombre del plan */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.2s; /* Transición suave para la interacción */
+    /* Borde degradado */
+    border: 10px solid; /* Ancho del borde */
+    border-image: linear-gradient(45deg, blue, red) 1; /* Degradado de borde */
+}
+
+.rectangle:hover {
+    transform: translateY(-5px); /* Levanta ligeramente el rectángulo al pasar el mouse */
+	
+}
+
+/* Estilo del logo */
+.logo {
+    width: 116px; /* Ajustar el tamaño del logo */
+    position: relative; /* Usar posición relativa */
+    top: 84px; /* Mueve el logo hacia abajo */
+    left: 50px; /* Mueve el logo hacia la derecha */
+    transform: scale(1.2); /* Escala el logo al 120% */
+    transition: transform 0.3s; /* Transición suave al escalar */
+    margin-bottom: -60px; /* Separación entre el logo y el contenido del rectángulo */
+    /* Sombra del logo */
+    filter: drop-shadow(3px 3px 1px rgba(0, 0, 0, 0.3)); /* Añadir sombra suave */
+}
+
+
+.logo:hover {
+    transform: scale(1.25); /* Aumenta el tamaño del logo al pasar el mouse */
+}
+
+/* Estilo del nombre del plan */
+.plan-name {
+    margin-top: 10px;
+    text-align: center;
+    position: relative; /* Posición relativa para mover el nombre */
+    top: 210px; /* Mueve el texto hacia abajo */
+    left: -205px; /* Mueve el texto hacia la derecha */
+    font-weight: bold; /* Pone el texto en negrita */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    font-size: 15px; /* Tamaño de fuente mayor */
+    color: #0034FF; /* Color más oscuro para el texto */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra para el texto */
+    margin-bottom: 10px; /* Separación entre el logo y el contenido del rectángulo */
+    filter: drop-shadow(3px 3px 1px rgba(0, 0, 0, 0.3)); /* Añadir sombra suave */
+}
+
+/* Estilo de la información adicional */
+.additional-info {
+    margin-top: 5px;
+    text-align: center;
+    position: relative; /* Posición relativa para mover el nombre */
+    top: 130px; /* Mueve el texto hacia abajo */
+    left: -215px; /* Mueve el texto hacia la derecha */
+    font-size: 15px; /* Tamaño de fuente normal */
+    color: #7F8C8D; /* Color gris para el texto adicional */
+    text-transform: none; /* Convierte el texto a mayúsculas */
+    font-weight: bold; /* Asegúrate de que el texto no esté en negrita */
+    filter: drop-shadow(3px 3px 1px rgba(0, 0, 0, 0.3)); /* Añadir sombra suave */
+}
+
+.gray-rectangle {
+    position: relative; /* Posicionar en relación al contenedor */
+    background-color: #D7D7D7; /* Color de fondo gris */
+    width: 603px; /* Ancho del rectángulo gris */
+    padding-top: 20px;
+    padding-right: 53px;
+    padding-left: 0px;
+    padding-bottom: 0px; /* Aumentar espaciado interno verticalmente */
+    border-radius: 4px; /* Bordes redondeados */
+    display: flex; /* Usar flexbox */
+    flex-direction: column-reverse; /* Organizar en columnas */
+    height: 239px; /* Mantener altura automática 239*/
+    max-height: 332px; /* Altura máxima para no crecer demasiado */
+    top: 4px; /* Mueve el texto hacia abajo */
+    left: 264px; /* Mueve el texto hacia la derecha */
+    /* Sombra del rectángulo */
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2); /* Efecto de sombra */
+}
+
+
+
+
+.hospital-info {
+    display: inline-block; /* Usar flexbox para alinear horizontalmente */
+    flex-direction: column; /* Eliminar márgenes */
+    text-align: left; /* Centrar texto dentro del contenedor */
+    padding-top: 1px;
+    padding-right: 1px;
+    padding-left: 1px;
+    padding-bottom: 1px; /* Espaciado interno para el rectángulo gris */
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-right: 1px;
+    font-size: 14px; /* Tamaño de letra para la cobertura */
+    margin-left: 1px;
+}
+
+.ambulatory-info {
+    display: flex; /* Usar flexbox para alinear horizontalmente */
+    flex-direction: column; /* Eliminar márgenes */
+    text-align: left; /* Centrar texto dentro del contenedor */
+    padding-top: 0px;
+    padding-right: 1px;
+    padding-left: 325px;
+    padding-bottom: 0px; /* Espaciado interno para el rectángulo gris */
+    margin-top: -121px;
+    margin-right: -121px;
+    margin-left: -121px;
+    font-size: 14px; /* Tamaño de letra para la cobertura */
+    margin-bottom: -121px;
+}
+
+.hospital-label, .ambulatory-label {
+    font-size: 100px; /* Tamaño de letra para las etiquetas */
+    font-weight: bold; /* Hacer la letra en negrita */
+    color: white; /* Color de texto en blanco */
+    margin-bottom: 2px; /* Espacio inferior reducido entre la etiqueta y la cobertura */
+}
+
+.hospital-coverage, .ambulatory-coverage {
+    font-size: 100px; /* Tamaño de letra para la cobertura */
+    color: white; /* Color de texto en blanco */
+    margin: 0; /* Eliminar márgenes */
+    text-align: center; /* Centrar texto dentro del contenedor */
+}
+
+.hospital-info strong, .ambulatory-info strong {
+    display: block; /* Esto permite centrar el título */
+    text-align: center; /* Centra el título */
+    font-weight: bold; /* Estilo para los encabezados */
+    font-size: 15px; /* Tamaño de letra para la cobertura */
+}
+
+.download-button {
+    background-color: red; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    position: relative; /* Espacio por encima del botón */
+    z-index: 2; /* Asegúrate de que esté por encima de otros elementos */
+    box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.2); /* Efecto de sombra */
+    transition: background-color 0.3s; /* Transición para efecto hover */
+    top: -90px; /* Posición desde la parte superior */
+    right: -940px; /* Posición desde la derecha */
+}
+
+/* Efecto hover */
+.download-button:hover {
+    background-color: darkred; /* Cambia el color en hover */
+}
+
+
+/* Estilos del texto UF */
+.uf-info {
+    position: absolute; /* Posicionamiento absoluto para el texto "UF" */
+    top: 75px; /* Posición desde la parte superior */
+    right: 55px; /* Posición desde la derecha */
+    font-size: 25px; /* Tamaño del texto */
+    color: #2E00CE; /* Color del texto */
+    font-weight: bold; /* Negrita */
+    background-color: rgba(255, 255, 255, 0); /* Fondo transparente */
+    padding: 5px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    filter: drop-shadow(3px 3px 1px rgba(0, 0, 0, 0.3)); /* Añadir sombra suave */
+    z-index: 1; /* Asegura que esté por encima de otros elementos */
+}
+
+.price-info-clp {
+    position: absolute; /* Posicionamiento absoluto para el texto "UF" */
+    top: 27px; /* Posición desde la parte superior */
+    right: 50px; /* Posición desde la derecha */
+    font-size: 30px; /* Tamaño del texto */
+    color: #2E00CE; /* Color del texto */
+    font-weight: bold; /* Negrita */
+    background-color: rgba(255, 255, 255, 0); /* Fondo transparente */
+    padding-top: 105px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 72px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    filter: drop-shadow(3px 3px 1px rgba(0, 0, 0, 0.3)); /* Añadir sombra suave */
+    z-index: 1; /* Asegura que esté por encima de otros elementos */
+}
+
+/* Contenedor del buscador */
+.search-container {
+    display: flex; /* Usar flexbox para centrar el contenido */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    margin-left: 20px; /* Espacio entre la nav y el buscador */
+}
+
+/* Estilos para el rectángulo del buscador con degradado */
+.search-box {
+    display: flex;
+    align-items: center;
+    padding-top: 2px;
+    padding-right: 0px;
+    padding-left: 8px;
+    padding-bottom: 3px; /* Espaciado interno */
+    border: 2px solid #007bff; /* Color del borde */
+    border-radius: 5px; /* Bordes redondeados */
+    background: linear-gradient(to right, blue, red); /* Degradado de azul a blanco */
+    transition: border-color 0.3s ease; /* Transición suave para el borde */
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-right: 301px;
+    margin-left: -397px;
+}
+
+/* Estilo para el cuadro de búsqueda */
+#searchInput {
+    font-size: 13.5px; /* Aumentar el tamaño de la fuente */
+    color: #333; /* Color del texto */
+    padding-top: 0px;
+    padding-right: 4px;
+    padding-left: 4px;
+    padding-bottom: 0px; /* Espacio interno */
+    border: 2px solid #ccc; /* Borde del cuadro */
+    border-radius: 5px; /* Bordes redondeados */
+    width: 302px; /* Ancho del cuadro, restando el padding y el borde */
+    background-color: #fff; /* Fondo del cuadro */
+    font-weight: bold; /* Hacer la letra en negrita */
+}
+
+/* Estilo para el cuadro de búsqueda cuando está en foco */
+#searchInput:focus {
+    border-color: #007bff; /* Cambiar color del borde al hacer clic */
+    outline: none; /* Quitar el contorno por defecto */
+}
+
+.search-icon {
+    margin-left: -23px; /* Espacio entre el input y el icono */
+    font-size: 15px;
+    cursor: pointer;
+    margin-right: 8px;
+    margin-top: 0px;
+}
+
+/* Estilo para el mensaje de no resultados */
+.no-results {
+    display: none; /* Ocultamos por defecto */
+    text-align: center; /* Centrar el texto */
+    color: red; /* Color del texto */
+    font-weight: bold; /* Hacerlo más visible */
+    margin: 20px; /* Espacio alrededor */
+    font-size: 1.2em; /* Tamaño de fuente más grande */
+    background-color: rgba(255,0,4,0.80); /* Fondo blanco semitransparente para mayor contraste */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(255,0,4,0.30); /* Sombra para darle profundidad */
+  
+}
+
+/* Estilos para el rectángulo a la izquierda */
+.left-rectangle {
+    width: 0px; /* Ancho del rectángulo */
+    height: 0px; /* Altura automática según el contenido */
+    background: white;/* Degradado de azul a blanco */
+    border: 9px solid #ccc; /* Borde del rectángulo */
+    border-radius: 5px; /* Bordes redondeados */
+    padding-top: 18px;
+    padding-right: 10000px;
+    padding-left: 66px;
+    padding-bottom: 124px; /* Espaciado interno */
+    margin-right: -22px; /* Espacio entre el rectángulo y el resto de la página */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+    margin-top: 242px;
+    margin-left: 55px;
+    border-image: linear-gradient(45deg, blue, red) 1; /* Degradado de borde */
+}
+
+/* Segundo rectángulo para el título */
+.title-container {
+    background-color: #B8B8B8; /* Color de fondo del segundo rectángulo */
+    border: 1px solid #EBEBEB; /* Borde */
+    padding-top: 3px;
+    padding-right: 0px;
+    padding-left: 30px;
+    padding-bottom: 0px; /* Espacio interno */
+    border-radius: 5px; /* Centrar el texto */
+    margin-bottom: 6px; /* Espacio entre el título y los checkboxes */
+    margin-right: -64px;
+    margin-top: -2px;
+    margin-left: -59px;
+}
+
+.select-title {
+    font-size: 20px; /* Tamaño de la fuente */
+    margin: 0; /* Elimina el margen */
+    color: #333; /* Color del texto */
+}
+
+/* Estilos para las etiquetas de los checkboxes */
+label {
+    display: flex; /* Alinea el checkbox y el texto en la misma línea */
+    align-items: center; /* Centra verticalmente el checkbox con el texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    margin-bottom: -4px; /* Espaciado entre los checkboxes */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la etiqueta */
+    margin-left: -31px;
+}
+
+/* Estilo específico para los checkboxes */
+input[type="checkbox"] {
+    width: 20px; /* Ajusta el ancho del checkbox */
+    height: 20px; /* Ajusta la altura del checkbox */
+    margin-right: 10px; /* Espacio entre el checkbox y el texto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el checkbox */
+    margin-left: 39px;
+    margin-bottom: 3px;
+	accent-color: blue; /* Cambia este valor por el color que desees */
+	
+}
+
+/* Cambiar el color del checkbox cuando está seleccionado */
+input[type="checkbox"]:checked {
+    background-color: blue; /* Cambia el color de fondo al seleccionarlo */
+    border-color: #007bff; /* Cambia el color del borde al seleccionarlo */
+}
+
+
+}

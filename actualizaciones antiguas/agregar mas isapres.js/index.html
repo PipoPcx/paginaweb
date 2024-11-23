@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planes Isapre</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Contenedor para las partículas -->
+    <div id="particles-js"><canvas class="particles-js-canvas-el" width="1378" height="881" style="width: 100%; height: 100%;"></canvas></div>
+
+    <!-- Rectángulo en la parte superior -->
+    <div id="header">
+        <img src="images/logo.png" alt="Logo" id="logo">
+        <nav>
+            <ul>
+                <li><a href="#quienes-somos">Quienes Somos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div style="display: flex; align-items: flex-start;">
+		
+		<div class="container" style="display: flex; align-items: flex-start;">
+        <!-- Rectángulo a la izquierda -->
+        <div class="left-rectangle">
+            <div class="title-container">
+                <h3 class="select-title">Selecciona Isapres</h3>
+            </div>
+            <label><input type="checkbox" class="isapre-checkbox" value="banmedica" onchange="filterByIsapre()"checked>banmedica</label><br>
+            <label><input type="checkbox" class="isapre-checkbox" value="colmena" onchange="filterByIsapre()"checked>colmena</label><br>
+            <label><input type="checkbox" class="isapre-checkbox" value="consalud" onchange="filterByIsapre()"checked>consalud</label><br>
+            <label><input type="checkbox" class="isapre-checkbox" value="vidatres" onchange="filterByIsapre()"checked>vidatres</label><br>
+            <label><input type="checkbox" class="isapre-checkbox" value="esencial" onchange="filterByIsapre()"checked>esencial</label><br>
+            <label><input type="checkbox" class="isapre-checkbox" value="masvida" onchange="filterByIsapre()"checked>masvida</label><br>
+			<label><input type="checkbox" class="isapre-checkbox" value="cruzblanca" onchange="filterByIsapre()"checked>cruzblanca</label><br>
+        </div>
+
+        <!-- Nuevo rectángulo de beneficiarios -->
+        <div class="new-rectangle">
+            <div class="text-container"><h3>Agregar Beneficiario</h3></div>
+			  
+        	<span id="help-icon" class="help-icon">?</span>
+        	<div id="help-text" class="help-text" style="display: none;">Recuerda que con la nueva ley, niños menores de 2 años el valor solo se considera para el GES</div>
+            <div class="input-group">
+                <label for="edad" class="edad-label">Edad:</label>
+                <input type="number" id="edad" class="edad-input" placeholder="Ingresa la edad">
+            </div>
+            <div class="toggle-group">
+                <label for="cotizante-toggle" class="carga-label">Carga</label>
+                <input type="checkbox" id="cotizante-toggle" class="carga-checkbox">
+            </div>
+            <button id="agregar-beneficiario" class="agregar-beneficiario-btn">👤 Agregar Beneficiario</button>
+            <ul id="beneficiarios-list" class="beneficiarios-container"></ul>
+            <div id="total-factor-container">
+   				 <p>Total Factor Etáreo: <span id="total-uf-value">0</span></p>
+			</div>
+        </div>
+
+        <!-- Contenedor para los rectángulos de isapres -->
+        <div id="rectangles-container" style="flex-grow: 1;">
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Buscar por plan o clínica" oninput="filterPlans()">
+                    <span class="search-icon">🔍</span>
+                </div>
+            </div>
+            <div class="rectangles-container" id="rectangles-container"></div>
+            <div class="no-results-message" style="display: none;">No se encontraron resultados.</div>
+        </div>
+    </div>
+
+    <!-- Scripts necesarios -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="banmedica.js"></script>
+	<script src="colmena.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

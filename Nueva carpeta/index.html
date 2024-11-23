@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planes Isapre</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="otro-estilo.css">
+</head>
+<body>
+    <!-- Contenedor para las partículas -->
+    <div id="particles-js"><canvas class="particles-js-canvas-el" width="1378" height="881" style="width: 100%; height: 100%;"></canvas></div>
+
+    <!-- Rectángulo en la parte superior -->
+    <div id="header">
+        <img src="images/logo.png" alt="Logo" id="logo">
+        <nav>
+            <ul>
+                <li><a href="#quienes-somos">Quienes Somos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div style="display: flex; align-items: flex-start;">
+        <!-- Rectángulo a la izquierda -->
+        <div class="left-rectangle">
+            <div class="title-container">
+                <h3 class="select-title">Selecciona Isapres</h3>
+            </div>
+            <label><input type="checkbox" class="isapre-checkbox" value="banmedica" onchange="filterByIsapre()">banmedica</label><br>
+            <label><input type="checkbox" class="isapre-checkbox" value="colmena" onchange="filterByIsapre()">colmena</label><br>
+            <label><input type="checkbox" class="isapre-checkbox" value="consalud" onchange="filterByIsapre()">consalud</label><br>
+            <label><input type="checkbox" class="isapre-checkbox" value="vidatres" onchange="filterByIsapre()">vidatres</label><br>
+            <label><input type="checkbox" class="isapre-checkbox" value="esencial" onchange="filterByIsapre()">esencial</label><br>
+            <label><input type="checkbox" class="isapre-checkbox" value="masvida" onchange="filterByIsapre()">masvida</label><br>
+        </div>
+
+        <!-- Nuevo rectángulo de beneficiarios -->
+        <div class="new-rectangle">
+			
+            <div class="text-container"><h3>Agregar Beneficiario</h3></div>
+            <div class="input-group">
+                <label for="edad" class="edad-label">Edad:</label>
+                <input type="number" id="edad" class="edad-input" placeholder="Ingresa la edad">
+            </div>
+            <div class="toggle-group">
+                <label for="cotizante-toggle" class="carga-label">Cotizante</label>
+                <input type="checkbox" id="cotizante-toggle" class="carga-checkbox">
+            </div>
+            <button id="agregar-beneficiario" class="agregar-beneficiario-btn">👤 Agregar Beneficiario</button>
+            <ul id="beneficiarios-list" class="beneficiarios-container"></ul>
+            <div id="total-container">
+                <p>Total Factor Etareo: <span id="total-uf-value">0</span></p>
+				
+            </div>
+        </div>
+
+        <!-- Contenedor para los rectángulos de isapres -->
+        <div id="rectangles-container" style="flex-grow: 1;">
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Buscar por plan o clínica" oninput="filterPlans()">
+                    <span class="search-icon">🔍</span>
+                </div>
+            </div>
+            <div class="rectangles-container" id="rectangles-container"></div>
+            <div class="no-results-message" style="display: none;">No se encontraron resultados.</div>
+        </div>
+    </div>
+
+    <!-- Scripts necesarios -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="banmedica.js"></script>
+    <script src="colmena.js"></script>
+    <script src="consalud.js"></script>
+    <script src="vidatres.js"></script>
+    <script src="esencial.js"></script>
+    <script src="masvida.js"></script>
+    <script src="scripts.js"></script>
+
+    <script>
+        // Tabla de factores etarios
+        function getFactorByAge(age, type) {
+            const ageRanges = {
+                '0-19': { cotizante: 0.6, carga: 0.6 },
+                '20-24': { cotizante: 0.9, carga: 0.7 },
+                '25-34': { cotizante: 1.0, carga: 0.7 },
+                '35-44': { cotizante: 1.3, carga: 0.9 },
+                '45-54': { cotizante: 1.4, carga: 1.0 },
+                '55-64': { cotizante: 2.0, carga: 1.4 },
+                '65+': { cotizante: 2.4, carga: 2.2 }
+            };
+
+            for (const range in ageRanges) {
+                const [min, max] = range.split('-').map(Number);
+                if ((age >= min && age <= max) || (range === '65+' && age >= 65)) {
+                    return ageRanges[range][type];
+                }
+            }
+            return 0;
+        }
+
+        // Calcular y actualizar el total de factores
+        function calculateTotalFactor() {
+            const beneficiaries = document.querySelectorAll('.beneficiario-item');
+            let totalFactor = 0;
+
+            beneficiaries.forEach(item => {
+                const age = parseInt(item.getAttribute('data-age'), 10);
+                const type = item.classList.contains('carga') ? 'carga' : 'cotizante';
+                totalFactor += getFactorByAge(age, type);
+            });
+
+            document.getElementById('total-uf-value').textContent = totalFactor.toFixed(2);
+        }
+
+        // Agregar beneficiarios
+        document.getElementById('agregar-beneficiario').addEventListener('click', function() {
+            const edad = document.getElementById('edad').value;
+            const esCotizante = document.getElementById('cotizante-toggle').checked;
+            const tipo = esCotizante ? 'Cotizante' : 'Carga';
+            const claseTipo = esCotizante ? 'cotizante' : 'carga';
+
+            if (edad) {
+                const listaBeneficiarios = document.getElementById('beneficiarios-list');
+                const nuevoBeneficiario = document.createElement('li');
+                nuevoBeneficiario.classList.add('beneficiario-item', claseTipo);
+                nuevoBeneficiario.setAttribute('data-age', edad);
+                nuevoBeneficiario.innerHTML = `Edad: ${edad} - Tipo: ${tipo} <button class="delete-button">X</button>`;
+                listaBeneficiarios.appendChild(nuevoBeneficiario);
+
+                // Evento para eliminar beneficiarios
+                nuevoBeneficiario.querySelector('.delete-button').addEventListener('click', function() {
+                    listaBeneficiarios.removeChild(nuevoBeneficiario);
+                    calculateTotalFactor();
+                });
+
+                // Limpiar campos
+                document.getElementById('edad').value = '';
+                document.getElementById('cotizante-toggle').checked = false;
+
+                // Actualizar el total de factor etario
+                calculateTotalFactor();
+            } else {
+                alert('Por favor, ingresa una edad válida.');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+{
+    "isapres": [
+        {
+            "class": "banmedica",
+            "logo": "images/banmedica.png",
+            "plans": [
+                {
+                    "name": "Plan 1 Banmedica",
+                    "additionalInfo": "Código 1234",
+                    "hospitalCoverage": [
+                        { "clinic": "Santa María", "coverage": "90%" },
+                        { "clinic": "Dávila", "coverage": "80%" }
+                    ],
+                    "ambulatoryCoverage": [
+                        { "clinic": "Santa María", "coverage": "85%" },
+                        { "clinic": "Dávila", "coverage": "75%" }
+                    ]
+                },
+                {
+                    "name": "Plan 2 Banmedica",
+                    "additionalInfo": "Código 1235",
+                    "hospitalCoverage": [
+                        { "clinic": "Santa María", "coverage": "85%" },
+                        { "clinic": "Dávila", "coverage": "75%" }
+                    ],
+                    "ambulatoryCoverage": [
+                        { "clinic": "Santa María", "coverage": "80%" },
+                        { "clinic": "Dávila", "coverage": "70%" }
+                    ]
+                }
+            ]
+        },
+        {
+            "class": "consalud",
+            "logo": "images/consalud.png",
+            "plans": [
+                {
+                    "name": "Plan 1 Consalud",
+                    "additionalInfo": "Código 5678",
+                    "hospitalCoverage": [
+                        { "clinic": "Los Condes", "coverage": "95%" },
+                        { "clinic": "Dávila", "coverage": "85%" }
+                    ],
+                    "ambulatoryCoverage": [
+                        { "clinic": "Los Condes", "coverage": "90%" },
+                        { "clinic": "Dávila", "coverage": "80%" }
+                    ]
+                }
+                // Agrega más planes aquí
+            ]
+        }
+        // Agrega más isapres aquí
+    ]
+}
