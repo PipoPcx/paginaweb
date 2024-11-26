@@ -212,26 +212,30 @@ function filterPlans() {
         noResultsMessage.style.display = "none";
     }
 }
+
 function filterByIsapre() {
-    // Obtener todas las isapres seleccionadas (los valores de los checkboxes marcados)
+    // Obtener todas las isapres seleccionadas
     const selectedIsapres = Array.from(document.querySelectorAll('.isapre-checkbox:checked'))
-        .map(checkbox => checkbox.value);
+        .map(checkbox => checkbox.value); // Obtener los valores de las isapres seleccionadas
 
-    // Mostrar en consola las isapres seleccionadas para depuración
-    console.log("Isapres seleccionadas:", selectedIsapres);
+    const allPlans = document.querySelectorAll('.plan'); // Seleccionar todos los planes
 
-    // Seleccionar todos los elementos de los planes
-    const allPlans = document.querySelectorAll('.plan');
+    // Si no hay isapres seleccionadas, mostramos todos los planes
+    if (selectedIsapres.length === 0) {
+        allPlans.forEach(plan => plan.style.display = 'block');
+        return;
+    }
 
+    // Filtrar los planes según la selección de isapres
     allPlans.forEach(plan => {
-        // Obtener el valor de 'data-isapre' del plan
-        const planIsapre = plan.getAttribute('data-isapre');
+        // Obtener el valor de la isapre asociada a cada plan
+        const planIsapre = plan.getAttribute('data-isapre'); // Asegúrate de que cada plan tenga este atributo
 
-        // Mostrar el plan si está en las isapres seleccionadas, ocultarlo en caso contrario
+        // Verificar si la isapre del plan está en la lista de seleccionadas
         if (selectedIsapres.includes(planIsapre)) {
-            plan.style.display = 'block'; // Mostrar
+            plan.style.display = 'block'; // Mostrar el plan si está en la lista seleccionada
         } else {
-            plan.style.display = 'none'; // Ocultar
+            plan.style.display = 'none'; // Ocultar el plan si no está en la lista seleccionada
         }
     });
 }
